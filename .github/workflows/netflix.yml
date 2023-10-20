@@ -1,4 +1,4 @@
-name: Build,Analyze,Scan
+name: Build-Analyze-Scan
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 
 jobs:
-  Build,Analyze,Scan:
+  Build-Analyze-Scan:
     name: Build
     runs-on: ubuntu-latest
     steps:
@@ -29,9 +29,3 @@ jobs:
           #command to scan files
           trivy fs .
           
-      # If you wish to fail your job when the Quality Gate is red, uncomment the
-      # following lines. This would typically be used to fail a deployment.
-      # - uses: sonarsource/sonarqube-quality-gate-action@master
-      #   timeout-minutes: 5
-      #   env:
-      #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
